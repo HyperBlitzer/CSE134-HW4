@@ -1,0 +1,31 @@
+:root {
+    --custom-font: "Permanent Marker", serif;
+    --primary-color: rgb(84, 117, 94);
+    --header-color: rgb(150, 171, 156);
+    --font-family: 'Garamond', serif;
+}
+body {
+    background-color: color(display-p3 0 0.325 0.407 / 1);;
+}
+
+#random-form {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px; 
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10%;
+}
+
+textarea {
+    min-height: 55px;
+    resize: none;
+    overflow: hidden;
+}
+
+label, output {
+    font-family: var(--font-family);
+    font-size: 1.5em;
+}

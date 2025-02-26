@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Jose Arreguin">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio page that displays a couple projects I have worked on. Also contains my bio and ways to contact me">
+        <meta name="keywords" content="portfolio programming game development projects hobbies">
+        <title>Portfolio Page</title>
+        <link rel="icon" type="image/x-icon" href="images/panko.ico">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+    <body>
+        <header>
+            <h1>Hello! I'm Jose!</h1>
+            <image-container>
+                <img src="images/zoomedpic.jpg" alt="Image Of Me" id="mepic">
+                <img src="images/gatitoo.png" alt="girlfriend drew this cat" id="otherpic">
+            </image-container>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact Info</a>
+                <a href="form.html">Contact Form</a>
+            </nav>
+        </header>
+        <br>
+        <main>
+            <h2 id="about">About:</h2>
+            <p id="about-section"> 
+                Hey, I am a 4th year MATH-CS major in Muir. My hobbies include programming, video games, board games and game development. 
+                Within the realm of CS I enjoy embedded systems and computer graphics. Some video games I am currently playing right now include
+                Overwatch 2, Marvel Rivals and Dead By Daylight. Some of my favorite board games include: Wingspan, Root and Binding of Isaac Four souls.
+            </p>
+            <div id="resume">
+                <a href="assets/ArreguinJoseResume.pdf" target="_blank">resume</a>
+            </div>
+
+            <hr>
+
+            <h2 id="portfolio">Portfolio:</h2>
+            <hr id="port-top">
+            <section>
+                <h3 id="lifesaver-title">Lifesaver App</h3>
+                <p class="project-content" id="lifesaver-content">
+                    Collaborated in a team of 4 to develop an MR app to help users navigate through hazardous AQI zones via wayfinding.
+                    Created seamless menu navigation using hand tracking, symbolic input and voice recognition with Meta XR.
+                    Implemented tutorial for users to learn about SCBA gear in VR with a World. We won most intuitive controls
+                    and best aesthetics from a panel of faculty.
+                </p>
+                <img alt="lifesaver app" src="images/lifesaverMR.png" id="lifesaver-image">
+
+                <hr id="lifesaver-bottom">
+
+                <h3 id="animation-title">Animation Player</h3>
+                <p class="project-content" id="animation-content">
+                    Program to load the skeleton and skin information of a character. Renders the skeleton of the character through forward kinematics.
+                    Renders the skin of the character through the smooth skinning algorithm. The program can also read keyframe information and correctly
+                    calculate the value of the keyframe curve to play an animation. It can also do quaternion interpolation through SLERP and CATMULL-ROM
+                    interpolations. There is also a Cloth simulator with user controls and a toggle for wind.
+                </p>
+                <img alt="animation player picture" src="images/quatinterpo.png" id="animation-image">                    
+
+                <hr id="animation-bottom">
+
+                <h3 id="quadcopter-title">Quadcopter</h3>
+                <p class="project-content" id="quadcopter-content">
+                    This is a custom built quadcopter where the PCB was created through Fusion 360. Oven and hand soldered with parts placed by hand.
+                    For the programming, the communication between the quadcopter and the remote was established through radio. The remote can control
+                    the throttle, pitch, roll and yaw. It can calibrate the gimbals, arm and disarm the quad. The control system was implemented by simple
+                    PID and the PID parameters were tuned with the remote. It established 10 seconds of flight.
+                </p>
+                <img alt="quadcopter PCB" id="quadcopter-image" src="images/mainquad.png">                    
+
+                <hr id="quadcopter-bottom">
+
+                <h3 id="watering-title">Automatic Watering System</h3>
+                    <p class="project-content" id="watering-content">
+                        A self watering plant system that uses a moisture sensor to trigger a pump to transfer water into the soil. The design of the pump
+                        holder and battery was created through Fusion 360 and was 3-D printed. The system was programmed through Arduino.
+                    </p>
+                    <img alt="watering system with flowering pot and plant" id="watering-image" src="images/watering.png">                    
+            </section>
+        </main>
+        <footer>
+            <hr>
+            <h2 id="contact">Contact Info:</h2>
+            <my-socials>
+                <a href="https://github.com/HyperBlitzer" target="_blank">Github</a>
+                <a href="https://linkedin.com/in/jose-arreguin-b9b60933a/" target="_blank">LinkedIn</a>
+            </my-socials>
+        </footer>
+    </body>
+</html>
