@@ -77,3 +77,40 @@ nav a:hover {
     background-color: var(--primary-color);
     transform: scale(1.1);
 }
+
+/* Flash effect for input fields */
+@keyframes flash {
+    0% {
+        background-color: rgb(255, 205, 205);
+    }
+    50% {
+        background-color: rgb(255, 100, 100);
+    }
+    100% {
+        background-color: rgb(255, 205, 205);
+    }
+}
+
+.flash-error {
+    animation: flash 1s ease-out;
+    animation-iteration-count: 5;
+    border: 2px solid red;
+}
+
+/* Fade effect for error messages */
+.error-message {
+    color: red;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    margin-top: 5px;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+
+.error-message.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
