@@ -77,3 +77,16 @@ nav a:hover {
     background-color: var(--primary-color);
     transform: scale(1.1);
 }
+
+input:focus, textarea:focus, select:focus, button:focus {
+    outline: none;
+}
+
+#email:placeholder-shown {
+    border-width: 0px;
+}
+
+#email:invalid:not(:placeholder-shown) {
+    border-width: 1px;
+    border-color: red;
+}
