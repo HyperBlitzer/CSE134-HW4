@@ -7,8 +7,19 @@
         <link rel="stylesheet" href="styles/form.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
         <script src="scripts/form.js"></script>
+        <script src="scripts/toggle.js"></script>
     </head>
     <body>
+        <label class="switch" class="nojs">
+            <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+            <span class="slider"></span>
+        </label>
+
+        <noscript>
+            <style>
+                .switch {display: none};
+            </style>
+        </noscript>
         <br>
         <form id="random-form" novalidate>
             <label for="name">Name</label>

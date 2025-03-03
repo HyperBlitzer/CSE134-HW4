@@ -58,7 +58,6 @@ function validateEmail() {
 
 function validateComments() {
     const maxLength = commentsIn.getAttribute("maxLength");
-    // Check if a charDisplay element already exists, and if so, remove it
     let charDisplay = commentsIn.parentNode.querySelector(".char-display");
     if (charDisplay) {
         charDisplay.remove();
@@ -66,7 +65,7 @@ function validateComments() {
 
     // Create a new charDisplay element
     charDisplay = document.createElement("p");
-    charDisplay.classList.add("char-display"); // Add a class for styling or easier reference later
+    charDisplay.classList.add("char-display");
     commentsIn.parentNode.insertBefore(charDisplay, commentsIn.nextSibling);
 
 
@@ -102,8 +101,6 @@ function validateForm(event) {
     if (emailIn.value == "") {
         errorMessages.push({field: "email", message: "email is empty", name: emailIn.value});
     }
-
-    validateComments();
     validateEmail();
     validateName();
 
@@ -136,40 +133,5 @@ function validateForm(event) {
 
     errorMessages.length = 0;
 }
-
-/*
-function validateForm () {
-    //Clear the error messages if any
-    errorMessages = [];
-    console.log(errorMessages);
-    errorOut.innerHTML = "";
-    infoOut.innerHTML = "";
-    let successful = true;
-
-    //Check if name is empty
-    if (nameIn.value == "") {
-        errorMessages.push("Name is required!");
-        successful = false;
-    }
-
-    // Check if email is in a valid form
-    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (!emailPattern.test(emailIn.value)) {
-        errorMessages.push("Enter a valid email!");
-        successful = false;
-    }
-
-    if (successful) {
-        infoOut.innerHTML = "Form successful!";
-        return true;
-    } else {
-        // Populate the innerHTML with the array containing all the error messages
-        infoOut.innerHTML = "Form unsuccessful!";
-        let combined = errorMessages.join("<br>");
-        errorOut.innerHTML = combined;
-        return false;
-    }
-}
-*/
 
 document.addEventListener("DOMContentLoaded", afterDOM);
