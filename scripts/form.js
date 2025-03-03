@@ -109,6 +109,7 @@ function validateForm(event) {
     formData.append("name", nameIn.value);
     formData.append("email", emailIn.value);
     formData.append("comments", commentsIn.value);
+    formData.append("possible_bot", true);
 
     formData.append("form-errors", JSON.stringify(errorMessages));
 
